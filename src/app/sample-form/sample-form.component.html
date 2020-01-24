@@ -1,0 +1,14 @@
+<form [formGroup]="todoForm" (ngSubmit)="onSubmit()">
+  
+  <label>
+    Title:
+    <input type="text" formControlName="title">
+  </label>
+
+  <label>
+    Description:
+    <input type="text" formControlName="description">
+  </label>
+<button type="submit" [disabled]="!todoForm.valid">Submit</button>
+</form>
+

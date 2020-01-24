@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-sample-form',
@@ -14,7 +15,7 @@ export class SampleFormComponent implements OnInit {
   }
 
   todoForm = new FormGroup({
-    title: new FormControl(''),
+    title: new FormControl('', Validators.required),
     description: new FormControl(''),
   });
 
